@@ -55,13 +55,4 @@ object AutoTerms : Module(
             TerminalTypes.ORDER ->
                 windowClick(TerminalSolver.currentTerm.solution.first(), if (middleClick) PlayerUtils.ClickType.Middle else PlayerUtils.ClickType.Left)
 
-            TerminalTypes.MELODY ->
-                windowClick(TerminalSolver.currentTerm.solution.find { it % 9 == 7 } ?: return, if (middleClick) PlayerUtils.ClickType.Middle else PlayerUtils.ClickType.Left)
-
-            else -> windowClick(item, if (middleClick) PlayerUtils.ClickType.Middle else PlayerUtils.ClickType.Left)
-        }
-        clickedThisWindow = true
-        clock.update()
-        breakClock.update()
-    }
-}
+           
